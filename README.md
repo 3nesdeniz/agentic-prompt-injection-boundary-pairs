@@ -191,6 +191,10 @@ Run the complete build and validation pipeline:
 
 Use it as one evaluation surface alongside real application context, policy tests, multilingual probes, human review and deployment-specific telemetry.
 
+## Technical article
+
+The design choices behind the controlled pairs, split policy and false-positive-aware evaluation surface are explained in [A Prompt-Injection Dataset Should Test Boundaries, Not Keywords](https://medium.com/@3nesdeniz/a-prompt-injection-dataset-should-test-boundaries-not-keywords-79589beda0b6).
+
 ## Provenance and license
 
 The scenarios and examples were created for this release by **Enes Deniz**, Co-Founder of [AltaySec](https://altaysec.com.tr), and manually reviewed before publication. The dataset contains no customer data, private conversations or copied proprietary prompts.
