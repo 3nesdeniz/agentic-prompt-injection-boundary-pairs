@@ -82,6 +82,18 @@ This dataset takes a stricter approach. Each attack is paired with a legitimate 
 - Deterministic build, validation scripts and SHA-256 checksums
 - Synthetic, manually reviewed content with no customer or private data
 
+## Interactive explorer
+
+[Open the Agentic Prompt-Injection Boundary Explorer](https://huggingface.co/spaces/3nesdeniz/agentic-prompt-injection-explorer) to inspect the dataset without writing code. The live demo supports:
+
+- side-by-side comparison of each matched benign/attack pair;
+- filtering by workflow scenario and attack family;
+- scenario-level views of roles, tools, approval gates and risk domains;
+- record search across decisions, splits, source contexts and expected actions;
+- shareable links that restore the selected pair and view.
+
+The explorer runs entirely in the browser from the published dataset snapshot. It does not send prompt text to an external model or API.
+
 ## Why paired boundary cases?
 
 The pair below uses the same refund workflow. The benign request preserves the approval gate; the attack tries to replace it with a message-level claim.
