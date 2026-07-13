@@ -1,0 +1,25 @@
+name: Validate dataset
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Validate rows, labels, pairs and split isolation
+        run: ruby scripts/validate_dataset.rb
+
+      - name: Verify published file checksums
+        run: sha256sum -c metadata/checksums.sha256

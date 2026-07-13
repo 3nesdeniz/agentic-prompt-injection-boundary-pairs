@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/3nesdeniz/agentic-prompt-injection-boundary-pairs/blob/main/metadata/schema.json",
+  "title": "Agentic Prompt-Injection Boundary Pair Row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "pair_id",
+    "scenario_id",
+    "text",
+    "label",
+    "category",
+    "attack_family",
+    "pair_family",
+    "source_context",
+    "risk_domain",
+    "target_boundary",
+    "expected_action",
+    "source_type",
+    "language",
+    "split"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^apibp_[0-9]{4}_[ab]$" },
+    "pair_id": { "type": "string", "pattern": "^pair_[0-9]{4}$" },
+    "scenario_id": { "type": "string", "pattern": "^scn_[0-9]{3}$" },
+    "text": { "type": "string", "minLength": 45, "maxLength": 1200 },
+    "label": { "type": "integer", "enum": [0, 1] },
+    "category": { "type": "string", "enum": ["benign_boundary", "prompt_injection"] },
+    "attack_family": { "type": "string" },
+    "pair_family": { "type": "string" },
+    "source_context": { "type": "string", "minLength": 1 },
+    "risk_domain": { "type": "string", "minLength": 1 },
+    "target_boundary": { "type": "string", "minLength": 1 },
+    "expected_action": { "type": "string", "enum": ["allow", "block_or_review"] },
+    "source_type": { "const": "synthetic_curated" },
+    "language": { "const": "en" },
+    "split": { "type": "string", "enum": ["train", "validation", "test"] }
+  }
+}

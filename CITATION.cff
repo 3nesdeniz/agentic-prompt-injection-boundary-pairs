@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: Agentic Prompt-Injection Boundary Pairs
+message: If you use this dataset, please cite it using the metadata in this file.
+type: dataset
+authors:
+  - family-names: Deniz
+    given-names: Enes
+    orcid: https://orcid.org/0009-0006-9491-3565
+version: 1.0.0
+date-released: 2026-07-13
+license: CC-BY-4.0
+repository-code: https://github.com/3nesdeniz/agentic-prompt-injection-boundary-pairs
+url: https://huggingface.co/datasets/3nesdeniz/agentic-prompt-injection-boundary-pairs
+keywords:
+  - AI security
+  - LLM security
+  - prompt injection
+  - agentic AI
+  - red teaming
+  - hard negatives
