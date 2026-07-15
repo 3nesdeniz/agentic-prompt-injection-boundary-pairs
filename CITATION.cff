@@ -2,15 +2,25 @@ cff-version: 1.2.0
 title: Agentic Prompt-Injection Boundary Pairs
 message: If you use this dataset, please cite it using the metadata in this file.
 type: dataset
+abstract: >-
+  A synthetic English dataset of 1,200 examples organized as 600 controlled
+  benign/attack pairs across 50 enterprise and agentic workflow scenarios and
+  12 attack families. Paired rows share workflow context and vocabulary while
+  differing in whether a request preserves or crosses a security boundary. The
+  release includes scenario-isolated splits, JSONL and Parquet files,
+  deterministic validation, a review log, and SHA-256 checksums.
 authors:
   - family-names: Deniz
     given-names: Enes
+    affiliation: AltaySec
     orcid: https://orcid.org/0009-0006-9491-3565
 version: 1.0.0
 date-released: 2026-07-13
+doi: 10.5281/zenodo.21378693
 license: CC-BY-4.0
 repository-code: https://github.com/3nesdeniz/agentic-prompt-injection-boundary-pairs
-url: https://huggingface.co/datasets/3nesdeniz/agentic-prompt-injection-boundary-pairs
+repository-artifact: https://huggingface.co/datasets/3nesdeniz/agentic-prompt-injection-boundary-pairs
+url: https://doi.org/10.5281/zenodo.21378693
 keywords:
   - AI security
   - LLM security

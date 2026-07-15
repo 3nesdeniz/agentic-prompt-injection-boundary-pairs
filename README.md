@@ -66,6 +66,8 @@ dataset_info:
 
 # Agentic Prompt-Injection Boundary Pairs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21378693.svg)](https://doi.org/10.5281/zenodo.21378693)
+
 Most prompt-injection datasets make the attack easy to recognize. The malicious row contains obvious override language, while the benign row discusses something unrelated. A classifier can look capable without learning the boundary that matters in production.
 
 This dataset takes a stricter approach. Each attack is paired with a legitimate request from the same workflow. The two rows share the asset, role, tool and topic. What changes is the security decision: the attack crosses an instruction, authorization, trust, confidentiality or approval boundary; the benign request does not.
@@ -178,7 +180,8 @@ The release process checks:
 
 A stratified author review covered 180 pairs and 360 rows: every attack family, every split and every phrasing variant. See [`metadata/review_log.md`](metadata/review_log.md) for the review scope and limitations.
 
-Run the complete build and validation pipeline:
+The reproducibility workflow is pinned to DuckDB CLI 1.5.4. Use the same
+version locally, then run the complete build and validation pipeline:
 
 ```bash
 ./scripts/build_all.sh
@@ -221,9 +224,12 @@ Released under [CC BY 4.0](LICENSE). Attribution is required for redistribution 
   title     = {Agentic Prompt-Injection Boundary Pairs},
   year      = {2026},
   version   = {1.0.0},
-  publisher = {Hugging Face},
-  url       = {https://huggingface.co/datasets/3nesdeniz/agentic-prompt-injection-boundary-pairs}
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21378693},
+  url       = {https://doi.org/10.5281/zenodo.21378693}
 }
 ```
+
+Zenodo record: [https://doi.org/10.5281/zenodo.21378693](https://doi.org/10.5281/zenodo.21378693)
 
 GitHub: https://github.com/3nesdeniz/agentic-prompt-injection-boundary-pairs
