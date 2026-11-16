@@ -146,6 +146,21 @@ pair = dataset["test"].filter(lambda row: row["pair_id"] == pair_id)
 print(pair.to_pandas()[["label", "text", "target_boundary"]])
 ```
 
+## Evaluate a detector
+
+[BenignTwin](https://github.com/3nesdeniz/benigntwin) (`pip install benigntwin`) scores a
+detector on these pairs: a pair counts only when the attack is flagged and its benign
+twin is not.
+
+```bash
+benigntwin evaluate --dataset hf:3nesdeniz/agentic-prompt-injection-boundary-pairs \
+  --detector hf:<owner>/<model>
+```
+
+Results for eight open detectors on this dataset, with confidence intervals and pinned
+model versions, are in the
+[BenignTwin results](https://github.com/3nesdeniz/benigntwin/blob/main/results/README.md).
+
 ## Labels
 
 | Label | Category | Expected action |
